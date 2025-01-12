@@ -5,26 +5,32 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
-import SearchField from "@/components/SearchField";
+import ForYouFeed from "@/app/(main)/mmkinc/ForYouFeed";
+import { Alert } from "react-bootstrap";
 
 export default function Home() {
   return (
     <main className="flex w-full min-w-0 gap-5">
       <div className="w-full min-w-0 space-y-5">
 
-        <h1 className="text-3xl font-semibold">İnşaat İş ilanları</h1>
+
+<Alert style={{textAlign:"center", fontSize:"55px", background:"green",color:"white"}}> Mobile Apps</Alert>
+
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">İlanlar</TabsTrigger>
-            <TabsTrigger value="following">Kategoride Ara</TabsTrigger>
-            <TabsTrigger value="mm">Yeni ilan Ver</TabsTrigger>
+          <TabsTrigger value="for-you">Android Apps</TabsTrigger>
+
+            <TabsTrigger value="for-you">Ios Apps</TabsTrigger>
+            <TabsTrigger value="mm">Cross Platform Apps</TabsTrigger>
+            <TabsTrigger value="following">Web Apps</TabsTrigger>
 
           </TabsList>
+
           <TabsContent value="for-you">
+            <ForYouFeed />
           </TabsContent>
           <TabsContent value="following">
 
-<SearchField/>
           </TabsContent>
     
 
@@ -33,7 +39,6 @@ export default function Home() {
 
 
         <TabsContent value="mm">
-<h1 className="text-3xl font-semibold">İlan vermek için <a href="/signup">üye olun</a> </h1>
 
     </TabsContent>
     </Tabs>

@@ -11,11 +11,11 @@ function Mmmnavbar() {
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#home">Yekazad Software Center</Navbar.Brand>
+        <Navbar.Brand href="/malper">Yekazad Software Center</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="/malper">Home</Nav.Link>
             <NavDropdown title="Web" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Promotion Website</NavDropdown.Item>
               <NavDropdown.Item href="/malper/mmkinc">
@@ -49,7 +49,7 @@ function Mmmnavbar() {
 
 
             <NavDropdown title="Desktop " id="basic-nav-dropdown">
-              <NavDropdown.Item href="/mmwesayit">Windows Apps</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmwesayit">Windows Apps</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
               </NavDropdown.Item>
@@ -75,39 +75,40 @@ function Mmmnavbar() {
 
 
             <NavDropdown title="Machine Learning" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmhewcedari">NLP</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                
+                Object Detection
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Image Processing</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Advanced
               </NavDropdown.Item>
             </NavDropdown>
 
 
             <NavDropdown title="Robotics" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Pilot</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                
+                Rover
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Docs</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
               </NavDropdown.Item>
             </NavDropdown>
 
             <NavDropdown title="For Developers" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.1">Courses</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
-                Another action
+                Documantations
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Contribute</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
-                Separated link
+                Join to Yekazad
               </NavDropdown.Item>
             </NavDropdown>
 

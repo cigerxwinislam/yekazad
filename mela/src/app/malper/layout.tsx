@@ -4,6 +4,7 @@ import { Alert } from "react-bootstrap";
 import Mmmnavbar from "./components/mmnav";
 
 import 'bootstrap/dist/css/bootstrap.css'
+import Footer from "./components/mmbingeh";
 
 
 
@@ -22,6 +23,7 @@ export default async function Layout({
 
 {children}
 
+<Footer/>
 </div>
   );
 }
