@@ -1,6 +1,6 @@
-// Bismillahirahmanirahim
-//Elhamdulillahirahmanirahim
-//es-selatu vesselamu ala rasulina Muhammedin ve ala alihi , ve sahbihi ecmain
+// Bismillahirrahmanirrahim 
+
+
 
 import { Toaster } from "@/components/ui/toaster";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
@@ -11,11 +11,8 @@ import { extractRouterConfig } from "uploadthing/server";
 import { fileRouter } from "./api/uploadthing/core";
 import "./globals.css";
 import ReactQueryProvider from "./ReactQueryProvider";
-import SessionProvider from "./(main)/SessionProvider";
-import { validateRequest } from "@/auth";
-import { redirect } from "next/navigation";
-import MenuBar from "./(main)/MenuBar";
 
+import Alert from 'react-bootstrap';
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -27,19 +24,17 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Ferhenga Mela",
-    default: "Ferhenga Mela",
+    template: "%s | Yekazad Software Center",
+    default: " Yekazad Software Center",
   },
-  description: "İnşaat ve ... ",
+  description: " Software Development",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
@@ -51,9 +46,10 @@ export default async function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-           
-            {children}
 
+
+
+              {children}
           </ThemeProvider>
         </ReactQueryProvider>
         <Toaster />

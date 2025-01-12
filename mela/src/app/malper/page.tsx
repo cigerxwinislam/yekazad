@@ -2,31 +2,34 @@
 
 
 
-import PostEditor from "@/components/posts/editor/PostEditor";
-import TrendsSidebar from "@/components/TrendsSidebar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import FollowingFeed from "./FollowingFeed";
-import ForYouFeed from "./ForYouFeed";
+import { Home, Car, Shirt, Building, Briefcase, Paintbrush } from 'lucide-react';
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex w-full min-w-0 gap-5">
-      <div className="w-full min-w-0 space-y-5">
-        <PostEditor />
-        <Tabs defaultValue="for-you">
-          <TabsList>
-            <TabsTrigger value="for-you">Ji Bo Te</TabsTrigger>
-            <TabsTrigger value="following">Tê şopandin</TabsTrigger>
-          </TabsList>
-          <TabsContent value="for-you">
-            <ForYouFeed />
-          </TabsContent>
-          <TabsContent value="following">
-            <FollowingFeed />
-          </TabsContent>
-        </Tabs>
-      </div>
-      <TrendsSidebar />
-    </main>
+    <div className="flex flex-col gap-4">
+      <a href='/malper/mmavahi' className="flex items-center">
+        <Home className="inline-block mr-2" /> Emlak
+      </a>
+
+      <a href='/malper/mmwesayit' className="flex items-center">
+        <Car className="inline-block mr-2" /> Araç
+      </a>
+
+      <a href='/malper/mmkinc' className="flex items-center">
+        <Shirt className="inline-block mr-2" /> Giyim
+      </a>
+
+      <a href='/malper/mmkedkar' className="flex items-center">
+        <Building className="inline-block mr-2" /> İnşaat iş ilanları
+      </a>
+
+      <a href='/malper/mmkargeh' className="flex items-center">
+        <Briefcase className="inline-block mr-2" /> İş ilanları
+      </a>
+
+      <a href='/malper/mmhuner' className="flex items-center">
+        <Paintbrush className="inline-block mr-2" /> Sanat ve el sanatları
+      </a>
+    </div>
   );
 }
