@@ -1,5 +1,6 @@
 // Bismillahirahmanirahim
-
+// Elhamdullillahirabbulalemin
+//Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
 
 
 import prisma from "@/lib/prisma";
