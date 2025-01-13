@@ -108,17 +108,7 @@ async function UserInfoSidebar({ user }: UserInfoSidebarProps) {
           {user.bio}
         </div>
       </Linkify>
-      {user.id !== loggedInUser.id && (
-        <FollowButton
-          userId={user.id}
-          initialState={{
-            followers: user._count.followers,
-            isFollowedByUser: user.followers.some(
-              ({ followerId }) => followerId === loggedInUser.id,
-            ),
-          }}
-        />
-      )}
+    
     </div>
   );
 }
