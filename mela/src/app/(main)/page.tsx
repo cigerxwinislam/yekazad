@@ -17,7 +17,7 @@ function page() {
 <br></br>
 
 
-<Alert style={{background:"green", color:"white",}}>Sernameye name nameye Allah <br></br> 
+<Alert style={{background:"green", color:"white",textAlign:"center"}}>Sernameye name nameye Allah <br></br> 
 
 Be namaye nameye kemi wi Wallah
 </Alert>
@@ -38,10 +38,12 @@ Be namaye nameye kemi wi Wallah
 <Alert>     <a href='/mmavahi'>Desktop</a> 
 </Alert>
 
-<Alert>     <a href='/mmavahi'>Artificial Intelligence</a> 
+<Alert>     <a href='/mmavahi'>Courses</a> 
 </Alert>
 
-<Alert>References</Alert>
+
+<Alert>     <a href='/mmavahi'>References</a> 
+</Alert>
 
 </Alert>
     </div>
