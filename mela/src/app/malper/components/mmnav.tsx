@@ -16,29 +16,39 @@ function Mmmnavbar() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link href="/malper">Home</Nav.Link>
-            <NavDropdown title="Web" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Promotion Website</NavDropdown.Item>
+            <NavDropdown title="Products" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Web Sites</NavDropdown.Item>
               <NavDropdown.Item href="/malper/mmkinc">
                 
-             Blog Website
+             Mobile Apps
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Social Media Websites</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Desktop Apps</NavDropdown.Item>
               <NavDropdown.Divider />
+              <NavDropdown.Item href="/malper/mmavahi">
+                
+                Artificial Intelligence
+              </NavDropdown.Item>
+
+
+
+
+
               <NavDropdown.Item href="#action/3.4">
-                Repairing
+                Health/Repairing
               </NavDropdown.Item>
             </NavDropdown>
 
 
 
 
-            <NavDropdown title="Mobile" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmkedkar">Android Native Apps</NavDropdown.Item>
+            <NavDropdown title="Courses" id="basic-nav-dropdown">
+              <NavDropdown.Item href="/malper/mmkedkar">Web</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
-                Ios Native Apps
+                
+Mobile
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Web Apps </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Machine Learning</NavDropdown.Item>
               <NavDropdown.Divider />
               <NavDropdown.Item href="#action/3.4">
                 
@@ -48,7 +58,7 @@ function Mmmnavbar() {
 
 
 
-            <NavDropdown title="Desktop " id="basic-nav-dropdown">
+            <NavDropdown title="Services " id="basic-nav-dropdown">
               <NavDropdown.Item href="/malper/mmwesayit">Windows Apps</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
@@ -74,7 +84,7 @@ function Mmmnavbar() {
           
 
 
-            <NavDropdown title="Machine Learning" id="basic-nav-dropdown">
+            <NavDropdown title="References" id="basic-nav-dropdown">
               <NavDropdown.Item href="/malper/mmhewcedari">NLP</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
