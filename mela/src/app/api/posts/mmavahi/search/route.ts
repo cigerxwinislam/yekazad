@@ -1,12 +1,6 @@
-<<<<<<< HEAD:src/app/api/posts/mmavahi/search/route.ts
 // Bismillahirrahmanirahim
 // Elhamdullillahirabbulalemin
 //Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
-=======
-//Bismillahirahmanirahim 
->>>>>>> origin/main:src/app/api/search/route.ts
-
-
 
 import { validateRequest } from "@/auth";
 import prisma from "@/lib/prisma";
