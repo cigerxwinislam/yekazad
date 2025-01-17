@@ -46,6 +46,11 @@ Be namaye nameye kemi wi Wallah
 </Alert>
 
 </Alert>
+
+
+<Alert>     <a href='/malper'>Site</a> 
+</Alert>
+
     </div>
   )
 }

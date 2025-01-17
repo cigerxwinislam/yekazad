@@ -17,14 +17,14 @@ function Mmmnavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/malper">Home</Nav.Link>
             <NavDropdown title="Products" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Web Sites</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmavahi">Web Sites</NavDropdown.Item>
               <NavDropdown.Item href="/malper/mmkinc">
                 
              Mobile Apps
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Desktop Apps</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkargeh">Desktop Apps</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/malper/mmavahi">
+              <NavDropdown.Item href="/malper/mmkedkar">
                 
                 Artificial Intelligence
               </NavDropdown.Item>
@@ -33,7 +33,7 @@ function Mmmnavbar() {
 
 
 
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/malper/mmwesayit">
                 Health/Repairing
               </NavDropdown.Item>
             </NavDropdown>
@@ -42,7 +42,7 @@ function Mmmnavbar() {
 
 
             <NavDropdown title="Courses" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmkedkar">Web</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmperwerdehi">Web</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
                 
@@ -59,7 +59,7 @@ Mobile
 
 
             <NavDropdown title="Services " id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmwesayit">Windows Apps</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkarubar">Windows Apps</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
               </NavDropdown.Item>
@@ -85,7 +85,7 @@ Mobile
 
 
             <NavDropdown title="References" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmhewcedari">NLP</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mm">NLP</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 
                 Object Detection
@@ -98,20 +98,8 @@ Mobile
             </NavDropdown>
 
 
-            <NavDropdown title="Robotics" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Pilot</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
-                Rover
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Docs</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-              </NavDropdown.Item>
-            </NavDropdown>
-
             <NavDropdown title="For Developers" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Courses</NavDropdown.Item>
+              <NavDropdown.Item href="/mmmmm">Courses</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Documantations
               </NavDropdown.Item>

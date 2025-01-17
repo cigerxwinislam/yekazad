@@ -14,7 +14,7 @@ export default function Home() {
       <div className="w-full min-w-0 space-y-5">
 
 
-       <Alert>Web Sites</Alert>
+       <Alert> References</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Promotion </TabsTrigger>
