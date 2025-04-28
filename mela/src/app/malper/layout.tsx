@@ -18,7 +18,7 @@ export default async function Layout({
   return (
 <div>
 
-<Alert>Supports Palastina and Rojava!</Alert>
+<Alert variant="warning">Supports Palastina and Rojava!</Alert>
 <Mmmnavbar/>
 
 {children}
