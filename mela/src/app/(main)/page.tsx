@@ -36,7 +36,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Sporcu Beslenmesi</Card.Title>
+              <Card.Title>Products</Card.Title>
               <Card.Text>Admin panelinin ana sayfasına erişim sağlayın.</Card.Text>
               <Button variant="primary" href="/mmavahi">
                 Git
@@ -47,7 +47,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Psikoloji ve Beslenme Sayfası</Card.Title>
+              <Card.Title>Courses</Card.Title>
               <Card.Text>Hakkımızda sayfasını düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmkinc">
                 Git
@@ -58,7 +58,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Hastalıklar ve Beslenme Sayfası</Card.Title>
+              <Card.Title>Services</Card.Title>
               <Card.Text>Beslenme programlarını yönetin.</Card.Text>
               <Button variant="primary" href="/mmkargeh">
                 Git
@@ -72,7 +72,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Diyet Çeşitleri Sayfası</Card.Title>
+              <Card.Title> For Developers</Card.Title>
               <Card.Text>Programlarınızı düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/mmwesayit">
                 Git
@@ -83,7 +83,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Sğlıklı Tarifler</Card.Title>
+              <Card.Title>References</Card.Title>
               <Card.Text>Blog yazılarınızı yönetin ve düzenleyin.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
                 Git
@@ -94,7 +94,7 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Site</Card.Title>
+              <Card.Title>The website</Card.Title>
               <Card.Text>Site ayarlarını düzenleyin veya görüntüleyin.</Card.Text>
               <Button variant="primary" href="/malper">
                 Git
