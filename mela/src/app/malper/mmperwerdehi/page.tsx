@@ -14,14 +14,14 @@ export default function Home() {
       <div className="w-full min-w-0 space-y-5">
 
 
-       <Alert>Web Sites</Alert>
+       <Alert>Courses</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">Promotion </TabsTrigger>
-            <TabsTrigger value="following">Blog</TabsTrigger>
-            <TabsTrigger value="mm">E commerce</TabsTrigger>
+            <TabsTrigger value="for-you">Web </TabsTrigger>
+            <TabsTrigger value="following">AI-ml</TabsTrigger>
+            <TabsTrigger value="mm">Android</TabsTrigger>
 
-            <TabsTrigger value="mm">Social Media</TabsTrigger>
+            <TabsTrigger value="mm">Linux</TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">
