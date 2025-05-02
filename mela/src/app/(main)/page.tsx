@@ -1,7 +1,5 @@
 // Bismillahirrahmanirahim
-// Elhamdulillahirabbulalemin
-// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
-"use client"
+
 import React from "react";
 import { Alert, Container, Row, Col, Card, Button } from "react-bootstrap";
 
@@ -37,9 +35,9 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Products</Card.Title>
-              <Card.Text>Admin panelinin ana sayfasına erişim sağlayın.</Card.Text>
+              <Card.Text>Access the main page of the admin panel.</Card.Text>
               <Button variant="primary" href="/mmavahi">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -48,9 +46,9 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Courses</Card.Title>
-              <Card.Text>Hakkımızda sayfasını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Text>Edit or view the about page.</Card.Text>
               <Button variant="primary" href="/mmkinc">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -59,9 +57,9 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>Services</Card.Title>
-              <Card.Text>Beslenme programlarını yönetin.</Card.Text>
+              <Card.Text>Manage nutrition programs.</Card.Text>
               <Button variant="primary" href="/mmkargeh">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -72,10 +70,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title> For Developers</Card.Title>
-              <Card.Text>Programlarınızı düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Title>For Developers</Card.Title>
+              <Card.Text>Edit or view your programs.</Card.Text>
               <Button variant="primary" href="/mmwesayit">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -84,9 +82,9 @@ function AdminPage() {
           <Card>
             <Card.Body>
               <Card.Title>References</Card.Title>
-              <Card.Text>Blog yazılarınızı yönetin ve düzenleyin.</Card.Text>
+              <Card.Text>Manage and edit your blog posts.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -94,10 +92,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>The website</Card.Title>
-              <Card.Text>Site ayarlarını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Title>The Website</Card.Title>
+              <Card.Text>Edit or view the website settings.</Card.Text>
               <Button variant="primary" href="/malper">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
