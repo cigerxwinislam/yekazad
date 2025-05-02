@@ -12,7 +12,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-5 py-3">
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-primary">
-          Yekazad Yazılım
+          Yekazad Software Center
         </Link>
 
         {/* Search Field */}
