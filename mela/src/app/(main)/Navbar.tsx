@@ -1,4 +1,4 @@
-// Bismillahirahmanirahim
+// Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
 
@@ -23,26 +23,26 @@ export default function Navbar() {
           {/* Dashboard Dropdown */}
           <div className="relative group">
             <button className="text-primary font-medium hover:underline">
-              Dashboard
+              Pêşbirk
             </button>
             <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
               <Link
                 href="/dashboard/overview"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Overview
+                Nirxandin
               </Link>
               <Link
                 href="/dashboard/stats"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Statistics
+                Statîstîk
               </Link>
               <Link
                 href="/dashboard/settings"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Settings
+                Mîhengên
               </Link>
             </div>
           </div>
@@ -50,26 +50,26 @@ export default function Navbar() {
           {/* Projects Dropdown */}
           <div className="relative group">
             <button className="text-primary font-medium hover:underline">
-              Projects
+              Projeyên
             </button>
             <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
               <Link
                 href="/projects/active"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Active Projects
+                Projeyên Çalak
               </Link>
               <Link
                 href="/projects/completed"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Completed Projects
+                Projeyên Qediya
               </Link>
               <Link
                 href="/projects/new"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Create New Project
+                Projeya Nû
               </Link>
             </div>
           </div>
@@ -77,26 +77,26 @@ export default function Navbar() {
           {/* User Dropdown */}
           <div className="relative group">
             <button className="text-primary font-medium hover:underline">
-              User
+              Bikarhêner
             </button>
             <div className="absolute right-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
               <Link
                 href="/user/profile"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Profile
+                Profîl
               </Link>
               <Link
                 href="/user/settings"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Settings
+                Mîhengên
               </Link>
               <Link
                 href="/logout"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Logout
+                Derkeve
               </Link>
             </div>
           </div>
@@ -104,26 +104,26 @@ export default function Navbar() {
           {/* Reports Dropdown */}
           <div className="relative group">
             <button className="text-primary font-medium hover:underline">
-              Reports
+              Raporên
             </button>
             <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
               <Link
                 href="/reports/sales"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Sales Reports
+                Raporên Firotanê
               </Link>
               <Link
                 href="/reports/traffic"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Traffic Reports
+                Raporên Hereketê
               </Link>
               <Link
                 href="/reports/errors"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Error Logs
+                Têketinên Çewtî
               </Link>
             </div>
           </div>
@@ -131,26 +131,26 @@ export default function Navbar() {
           {/* Settings Dropdown */}
           <div className="relative group">
             <button className="text-primary font-medium hover:underline">
-              Settings
+              Mîhengên
             </button>
             <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
               <Link
                 href="/settings/general"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                General Settings
+                Mîhengên Giştî
               </Link>
               <Link
                 href="/settings/security"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Security Settings
+                Mîhengên Ewlehî
               </Link>
               <Link
                 href="/settings/notifications"
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
               >
-                Notification Settings
+                Mîhengên Agahdariyê
               </Link>
             </div>
           </div>
