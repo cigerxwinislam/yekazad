@@ -11,6 +11,7 @@ import { extractRouterConfig } from "uploadthing/server";
 import { fileRouter } from "./api/uploadthing/core";
 import "./globals.css";
 import ReactQueryProvider from "./ReactQueryProvider";
+import AssistantRoot from "./malper/assistant";
 
 import Alert from 'react-bootstrap';
 const geistSans = localFont({
@@ -46,10 +47,8 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-
-
-
               {children}
+             
           </ThemeProvider>
         </ReactQueryProvider>
         <Toaster />

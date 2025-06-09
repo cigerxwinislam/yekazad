@@ -5,6 +5,7 @@ import Mmmnavbar from "./components/mmnav";
 
 import 'bootstrap/dist/css/bootstrap.css'
 import Footer from "./components/mmbingeh";
+import AssistantRoot from "./assistant";
 
 
 
@@ -22,7 +23,7 @@ export default async function Layout({
 <Mmmnavbar/>
 
 {children}
-
+ <AssistantRoot />
 <Footer/>
 </div>
   );
