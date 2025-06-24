@@ -1,6 +1,11 @@
 // Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// La havle ve la kuvvete illa billahil aliyyil azim
+// Allah u Ekber
+// La ilahe illallah Muhammedur Resulullah
+// Subhanallah, Elhamdulillah, Allahu Ekber, La ilahe illallah
+// Estağfirulllah El-Azim
 "use client"
 import React from "react";
 import { Alert, Container, Row, Col, Card, Button } from "react-bootstrap";
@@ -36,10 +41,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Sporcu Beslenmesi</Card.Title>
-              <Card.Text>Sporcu beslenmesi sayfasını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Title>Products Page</Card.Title>
+              <Card.Text>Manage or view the sports nutrition page.</Card.Text>
               <Button variant="primary" href="/mmavahi">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -47,10 +52,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Psikoloji ve Beslenme Sayfası</Card.Title>
-              <Card.Text>Psikoloji beslenmesi sayfasını düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Title>Courses Page</Card.Title>
+              <Card.Text>Manage or view the courses page.</Card.Text>
               <Button variant="primary" href="/mmkinc">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -58,10 +63,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Hastalıklar ve Beslenme Sayfası</Card.Title>
-              <Card.Text>Beslenme programlarını yönetin.</Card.Text>
+              <Card.Title>Services</Card.Title>
+              <Card.Text>Manage or view the services page.</Card.Text>
               <Button variant="primary" href="/mmkargeh">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -72,10 +77,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Diyet Çeşitleri Sayfası</Card.Title>
-              <Card.Text>Programlarınızı düzenleyin veya görüntüleyin.</Card.Text>
+              <Card.Title>References</Card.Title>
+              <Card.Text>Manage or view the references page.</Card.Text>
               <Button variant="primary" href="/mmwesayit">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -83,10 +88,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Sğlıklı Tarifler</Card.Title>
-              <Card.Text>Blog yazılarınızı yönetin ve düzenleyin.</Card.Text>
+              <Card.Title>For Developers</Card.Title>
+              <Card.Text>Manage or view the developer resources page.</Card.Text>
               <Button variant="primary" href="/mmkedkar">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
@@ -94,10 +99,10 @@ function AdminPage() {
         <Col md={4} className="mb-3">
           <Card>
             <Card.Body>
-              <Card.Title>Site</Card.Title>
-              <Card.Text>Siteyi görüntüleyin.</Card.Text>
+              <Card.Title>Site Management</Card.Title>
+              <Card.Text>Manage or view the site.</Card.Text>
               <Button variant="primary" href="/malper">
-                Git
+                Go
               </Button>
             </Card.Body>
           </Card>
