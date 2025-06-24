@@ -1,5 +1,9 @@
 // Bismillahirrahmanirrahim
-
+// Elhamdulillahirabbulalemin
+// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// Estağfirullah El-Azim
 "use client"
 
 import Container from 'react-bootstrap/Container';
@@ -17,14 +21,14 @@ function Mmmnavbar() {
           <Nav className="me-auto">
             <Nav.Link href="/malper">Home</Nav.Link>
             <NavDropdown title="Products" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmavahi">Web Sites</NavDropdown.Item>
-              <NavDropdown.Item href="/malper/mmkinc">
+              <NavDropdown.Item href="/malper/mmavahi/mmmweb">Web Sites</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmavahi/mmmobile">
                 
              Mobile Apps
               </NavDropdown.Item>
-              <NavDropdown.Item href="/malper/mmkargeh">Desktop Apps</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmavahi/mmmdesktop">Desktop Apps</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/malper/mmkedkar">
+              <NavDropdown.Item href="/malper/mmavahi/mmmai">
                 
                 Artificial Intelligence
               </NavDropdown.Item>
@@ -33,7 +37,7 @@ function Mmmnavbar() {
 
 
 
-              <NavDropdown.Item href="/malper/mmwesayit">
+              <NavDropdown.Item href="/malper/mmavahi/mmmhealth">
                 Health/Repairing
               </NavDropdown.Item>
             </NavDropdown>

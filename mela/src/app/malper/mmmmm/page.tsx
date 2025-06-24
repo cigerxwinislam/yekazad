@@ -1,11 +1,14 @@
 // Bismillahirrahmanirrahim
-
+// Elhamdulillahirabbulalemin
+// Ve salatu ve selamu ala resulina Muhammedin ve alihi ve sahbihi ecmain
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// Estağfirullah El-Azim
 
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 
-import ForYouFeed from "./ForYouFeed";
 import { Alert } from "react-bootstrap";
 
 export default function Home() {
@@ -14,7 +17,7 @@ export default function Home() {
       <div className="w-full min-w-0 space-y-5">
 
 
-       <Alert>For Developers</Alert>
+       <Alert>About Us</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
             <TabsTrigger value="for-you">Promotion </TabsTrigger>
@@ -26,7 +29,7 @@ export default function Home() {
           </TabsList>
           <TabsContent value="for-you">
 
-            <ForYouFeed/>
+           
           </TabsContent>
           <TabsContent value="following">
 
