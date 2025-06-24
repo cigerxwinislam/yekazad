@@ -1,7 +1,11 @@
 // Bismillahirrahmanirrahim
 // Elhamdulillahirrabbulalemin
 // Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
-
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// La ilahe illallah 
+// Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
+// Bila Allah Azze ve Celle me ji sunneta Resulullah Muhammed (s.a.v) neqetine, amin rabbal alemin 
+// Xeyni Allah tu Xweda tune
 import React from "react";
 
 const Footer = () => (
@@ -37,8 +41,8 @@ const Footer = () => (
               </a>
             </li>
             <li>
-              <a href="#!" className="text-white">
-                Contact
+              <a href="/login" className="text-white">
+                Administration
               </a>
             </li>
           </ul>

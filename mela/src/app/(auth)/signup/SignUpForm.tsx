@@ -1,5 +1,11 @@
 // Bismillahirahmanirahim
-
+// Elhamdulillahirrabbulalemin
+// Esselatu vesselamu ala seyyidina Muhammedin ve ala alihi ve sahbihi ecmain
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// La ilahe illallah 
+// Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
+// Bila Allah Azze ve Celle me ji sunneta Resulullah Muhammed (s.a.v) neqetine, amin rabbal alemin 
+// Xeyni Allah tu Xweda tune
 "use client";
 
 import LoadingButton from "@/components/LoadingButton";
@@ -50,7 +56,7 @@ export default function SignUpForm() {
           name="username"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Kullanıcı Adı</FormLabel>
+              <FormLabel>User Name</FormLabel>
               <FormControl>
                 <Input placeholder="Username" {...field} />
               </FormControl>
@@ -76,7 +82,7 @@ export default function SignUpForm() {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Şifre</FormLabel>
+              <FormLabel>Password</FormLabel>
               <FormControl>
                 <PasswordInput placeholder="Password" {...field} />
               </FormControl>
@@ -85,7 +91,7 @@ export default function SignUpForm() {
           )}
         />
         <LoadingButton loading={isPending} type="submit" className="w-full">
-          Üye Ol
+          Sign Up
         </LoadingButton>
       </form>
     </Form>
