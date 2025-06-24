@@ -18,11 +18,11 @@ export default function Home() {
     <main className="flex w-full min-w-0 gap-5 p-">
       <div className="w-full min-w-0 space-y-5">
 
-      <Alert variant="success"> Psikoloji ve Beslenme Sayfası</Alert>
+      <Alert variant="success"> Manage Developer Resources Page</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
-            <TabsTrigger value="mm">Yeni Gönderi </TabsTrigger>
+            <TabsTrigger value="for-you">For You</TabsTrigger>
+            <TabsTrigger value="mm">New Post</TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">
