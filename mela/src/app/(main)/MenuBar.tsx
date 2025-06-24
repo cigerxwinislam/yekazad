@@ -29,31 +29,31 @@ export default async function MenuBar({ className }: MenuBarProps) {
       >
         <Link href="/">
           <Home />
-          <span className="hidden lg:inline">Panel Anasayfa</span>
+          <span className="hidden lg:inline">Home</span>
         </Link>
       </Button>
     
       <Button
         variant="ghost"
         className="flex items-center justify-start gap-3"
-        title="Bêrika We"
+        title="Bookmarks"
         asChild
       >
         <Link href="/bookmarks">
           <Bookmark />
-          <span className="hidden lg:inline">Kaydedilenler</span>
+          <span className="hidden lg:inline">Bookmarks</span>
         </Link>
       </Button>
 
       <Button
         variant="ghost"
         className="flex items-center justify-start gap-3"
-        title="Gelen Mesajlar"
+        title="messages"
         asChild
       >
-        <Link href="/mmmpeyam">
+        <Link href="/messages">
           <Mail />
-          <span className="hidden lg:inline">Gelen Mesajlar</span>
+          <span className="hidden lg:inline">Messages</span>
         </Link>
       </Button>
     </div>
