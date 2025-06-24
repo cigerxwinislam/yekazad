@@ -71,8 +71,8 @@ export default function Navbar() {
             Kullanıcılar
           </Link>
 
-          {/* Blog ve Ayarlar Dropdownlarını mobilde ortala */}
-          <div className="w-full flex flex-col items-center">
+          {/* Blog ve Ayarlar Dropdownlarını mobilde alt alta, masaüstünde yan yana göster */}
+          <div className="w-full flex flex-col items-center lg:w-auto lg:flex-row lg:items-center lg:gap-3">
             <Dropdown>
               <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 text-center">
                 Blog
@@ -89,14 +89,14 @@ export default function Navbar() {
                   Yeni Blog Yazısı
                 </Dropdown.Item>
                 <Dropdown.Item as={Link} href="/categories">
-                  Kategoriler
+                 Categories
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
 
             <Dropdown>
-              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 mt-2 text-center">
-                Ayarlar
+              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 text-center">
+                Settings
               </Dropdown.Toggle>
               <Dropdown.Menu
                 onClick={() => {

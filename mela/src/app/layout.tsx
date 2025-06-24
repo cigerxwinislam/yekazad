@@ -61,3 +61,22 @@ export default function RootLayout({
     </html>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+export function Footer() {
+  return (
+    <footer className="flex items-center justify-center w-full h-16 bg-gray-800 text-white">
+      <p className="text-sm">© {new Date().getFullYear()} Yekazad Software Center</p>
+    </footer>
+  );
+  
+}
