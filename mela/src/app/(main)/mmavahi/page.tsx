@@ -8,18 +8,18 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ForYouFeed from "./ForYouFeed";
 
 import SearchField from "@/components/mmavahi/SearchField";
+import { Alert } from "react-bootstrap";
 
 export default function Home() {
   return (
-    <main className="flex w-full min-w-0 gap-5">
+    <main className="flex w-full min-w-0 gap-5 p-">
       <div className="w-full min-w-0 space-y-5">
 
-        <h1 className="text-3xl font-semibold">Malper</h1>
+      <Alert variant="success"> Sporcu Beslenmesi Sayfası</Alert>
         <Tabs defaultValue="mm">
           <TabsList>
-            <TabsTrigger value="for-you">Parvekirin</TabsTrigger>
-            <TabsTrigger value="following">Kategoride Ara</TabsTrigger>
-            <TabsTrigger value="mm">Parve Bike</TabsTrigger>
+            <TabsTrigger value="for-you">Paylaşılanlar</TabsTrigger>
+            <TabsTrigger value="mm">Yeni Gönderi </TabsTrigger>
 
           </TabsList>
           <TabsContent value="for-you">

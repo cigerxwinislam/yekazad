@@ -1,10 +1,9 @@
 // Bismillahirrahmanirrahim 
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
-// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
-// Subhanallah, Elhamdulillah, Allahu Ekber
-// La ilahe illallah, Muhammedur Resulullah
-// Allah U Ekber ve lillahi'l-hamd
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
+// SuphanAllah, Elhamdulillah, Allahu Ekber
+
 
 "use client";
 
@@ -22,10 +21,7 @@ interface PostProps {
   post: PostData;
 }
 
-export default function Post({ post }: PostProps) {
-
-
-
+export default function MmmPost({ post }: PostProps) {
 
   return (
     <article className="group/post space-y-3 rounded-2xl bg-card p-5 shadow-sm text-black">
@@ -36,8 +32,30 @@ export default function Post({ post }: PostProps) {
         </div>
       </div>
       <Linkify>
-        <div className="whitespace-pre-line break-words">
-          {post.content[0]}
+        <div className="space-y-3">
+          {Array.isArray(post.content)
+            ? post.content.map((line: string, i: number) => {
+                if (i === 0)
+                  return (
+                    <h2 key={i} className="text-xl font-bold mb-1">
+                      {line}
+                    </h2>
+                  );
+                if (i === 1)
+                  return (
+                    <div key={i} className="text-green-700 font-semibold mb-2">
+                      {line}
+                    </div>
+                  );
+                return (
+                  <p key={i} className="text-base whitespace-pre-line">
+                    {line}
+                  </p>
+                );
+              })
+            : (
+              <p className="text-base whitespace-pre-line">{post.content}</p>
+            )}
         </div>
       </Linkify>
       {!!post.attachments.length && (
@@ -51,7 +69,6 @@ export default function Post({ post }: PostProps) {
             className="block text-sm text-muted-foreground hover:underline"
             suppressHydrationWarning
           >
-            Daha fazla oku
           </Link>
         </div>
       </div>

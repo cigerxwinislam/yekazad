@@ -1,163 +1,140 @@
-// Bismillahirahmanirahim
+// Bismillahirrahmanirahim
 // Elhamdulillahirabbulalemin
 // Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi ecmain
+// La ilahe illallah, Muhammedur Resulullah
+// Allah U Ekber, Allah U Ekber, Allah U Ekber, La ilahe illallah
+// Subhanallah, Elhamdulillah, Allahu Ekber
+// Allah U Ekber ve lillahi'l-hamd
 
+"use client";
+import { useEffect, useRef, useState } from "react";
+import { Dropdown } from "react-bootstrap";
 import Link from "next/link";
-import SearchField from "@/components/SearchField";
 import UserButton from "@/components/UserButton";
+import { FaBars } from "react-icons/fa";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
+
+  // Menü dışına tıklanınca kapat
+  useEffect(() => {
+    if (!menuOpen) return;
+    function handleClick(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [menuOpen]);
+
   return (
     <header className="sticky top-0 z-10 bg-card shadow-sm">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-5 py-3">
+      <div
+        ref={navRef}
+        className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-5 px-5 py-3"
+      >
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-primary">
-          Yekazad Software Center
-        </Link>
+       
 
-        {/* Search Field */}
-        <SearchField />
+        {/* Mobil Menü Butonu */}
+        <button
+          className="lg:hidden p-2 rounded text-green-500"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Menüyü Aç/Kapat"
+        >
+          <FaBars size={22} />
+        </button>
 
-        {/* Dropdown Menus */}
-        <nav className="flex items-center gap-5">
-          {/* Dashboard Dropdown */}
-          <div className="relative group">
-            <button className="text-primary font-medium hover:underline">
-              Dashboard
-            </button>
-            <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
-              <Link
-                href="/dashboard/overview"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+        {/* Menü Öğeleri */}
+        <nav
+          className={`
+            flex-col lg:flex-row flex items-center gap-3 lg:gap-5
+            fixed lg:static top-16 left-0 w-full lg:w-auto bg-card lg:bg-transparent z-20
+            transition-all duration-200
+            ${menuOpen ? "flex" : "hidden lg:flex"}
+          `}
+        >
+          <Link
+            href="/dashboard"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            Dashboard
+          </Link>
+          <Link
+            href="/users"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            Kullanıcılar
+          </Link>
+
+          {/* Blog ve Ayarlar Dropdownlarını mobilde ortala */}
+          <div className="w-full flex flex-col items-center">
+            <Dropdown>
+              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 text-center">
+                Blog
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+                onClick={() => {
+                  if (window.innerWidth < 1024) setMenuOpen(false);
+                }}
               >
-                Overview
-              </Link>
-              <Link
-                href="/dashboard/stats"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                <Dropdown.Item as={Link} href="/posts">
+                  Blog Yazıları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/posts/new">
+                  Yeni Blog Yazısı
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/categories">
+                  Kategoriler
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+
+            <Dropdown>
+              <Dropdown.Toggle variant="link" className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-0 mt-2 text-center">
+                Ayarlar
+              </Dropdown.Toggle>
+              <Dropdown.Menu
+                onClick={() => {
+                  if (window.innerWidth < 1024) setMenuOpen(false);
+                }}
               >
-                Statistics
-              </Link>
-              <Link
-                href="/dashboard/settings"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Settings
-              </Link>
-            </div>
+                <Dropdown.Item as={Link} href="/settings/profile">
+                  Profil Ayarları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/settings/security">
+                  Güvenlik Ayarları
+                </Dropdown.Item>
+                <Dropdown.Item as={Link} href="/settings/notifications">
+                  Bildirim Ayarları
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
 
-          {/* Projects Dropdown */}
-          <div className="relative group">
-            <button className="text-primary font-medium hover:underline">
-              Projects
-            </button>
-            <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
-              <Link
-                href="/projects/active"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Active Projects
-              </Link>
-              <Link
-                href="/projects/completed"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Completed Projects
-              </Link>
-              <Link
-                href="/projects/new"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Create New Project
-              </Link>
-            </div>
-          </div>
-
-          {/* User Dropdown */}
-          <div className="relative group">
-            <button className="text-primary font-medium hover:underline">
-              User
-            </button>
-            <div className="absolute right-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
-              <Link
-                href="/user/profile"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Profile
-              </Link>
-              <Link
-                href="/user/settings"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Settings
-              </Link>
-              <Link
-                href="/logout"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Logout
-              </Link>
-            </div>
-          </div>
-
-          {/* Reports Dropdown */}
-          <div className="relative group">
-            <button className="text-primary font-medium hover:underline">
-              Reports
-            </button>
-            <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
-              <Link
-                href="/reports/sales"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Sales Reports
-              </Link>
-              <Link
-                href="/reports/traffic"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Traffic Reports
-              </Link>
-              <Link
-                href="/reports/errors"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Error Logs
-              </Link>
-            </div>
-          </div>
-
-          {/* Settings Dropdown */}
-          <div className="relative group">
-            <button className="text-primary font-medium hover:underline">
-              Settings
-            </button>
-            <div className="absolute left-0 mt-2 hidden w-48 bg-white shadow-lg group-hover:block">
-              <Link
-                href="/settings/general"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                General Settings
-              </Link>
-              <Link
-                href="/settings/security"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Security Settings
-              </Link>
-              <Link
-                href="/settings/notifications"
-                className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-              >
-                Notification Settings
-              </Link>
-            </div>
-          </div>
+          <Link
+            href="/reports"
+            className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
+            onClick={() => setMenuOpen(false)}
+          >
+            Raporlar
+          </Link>
         </nav>
 
-        {/* User Button */}
-        <UserButton className="sm:ms-auto" />
+         <Link href="/" className="text-2xl font-bold text-primary">
+          Yekazad SC
+        </Link>
+        {/* Kullanıcı Butonu */}
+        <div className="sm:ms-auto">
+          <UserButton />
+        </div>
+
+
+
       </div>
     </header>
   );
