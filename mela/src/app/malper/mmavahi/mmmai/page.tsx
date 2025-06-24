@@ -17,7 +17,7 @@ function page() {
         backgroundColor: "#f8f9fa",
         minHeight: "100vh",
         display: "flex",
-        flexDirection: "column", // mobilde dikey hizalama
+        flexDirection: "column",
         alignItems: "center",
         padding: "10px",
       }}
@@ -33,47 +33,34 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title style={{ fontSize: "1.5rem" }}>Sporcu Beslenmesi</Card.Title>
+          <Card.Title style={{ fontSize: "1.5rem" }}>AI Products</Card.Title>
           <Row className="g-4">
-            {/* Sol Kolon */}
+            {/* Left Column */}
             <Col xs={12} md={6} className="mb-3 mb-md-0">
               <Card style={{ textAlign: "center", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title style={{ fontSize: "1.1rem" }}>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title style={{ fontSize: "1.1rem" }}>The Importance of Artificial Intelligence</Card.Title>
                   <Card.Text style={{ fontSize: "1rem" }}>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Artificial Intelligence (AI) is transforming industries by automating processes, enhancing decision-making, and enabling innovative solutions. AI-powered products are now integral to healthcare, finance, education, and many other sectors.
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>Key Benefits of AI Products</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    AI solutions can analyze large datasets rapidly, identify patterns, and provide personalized recommendations. This leads to increased efficiency, cost savings, and improved user experiences.
                     <br />
                     <br />
-                    <strong>Sonuç</strong>
+                    <strong>Conclusion</strong>
                     <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    AI products are not just a trend—they are shaping the future by driving innovation, improving productivity, and solving complex problems across various domains.
                   </Card.Text>
                 </Card.Body>
               </Card>
             </Col>
-            {/* Sağ Kolon */}
+            {/* Right Column */}
             <Col xs={12} md={6} className="d-flex align-items-center">
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80"
                 style={{
                   border: "5px solid white",
                   borderRadius: "10px",
@@ -81,15 +68,13 @@ function page() {
                   height: "auto",
                   marginBottom: "10px",
                 }}
-                alt="ROJDA MUSA"
+                alt="Artificial Intelligence"
                 fluid
               />
             </Col>
           </Row>
         </Card.Body>
       </Card>
-      {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
-     
     </div>
   );
 }
