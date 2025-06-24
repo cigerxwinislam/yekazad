@@ -60,7 +60,7 @@ function page() {
     <div className="mt-8">
       <h2 className="text-2xl font-bold mb-4">Recent Updates</h2>
       <ul className="list-disc pl-5 text-gray-700">
-        <li>New feature added to the project management tool.</li>
+        <li>New project management tool has been added.</li>
         <li>Weekly team meeting scheduled for Friday.</li>
         <li>System maintenance planned for Saturday night.</li>
       </ul>
