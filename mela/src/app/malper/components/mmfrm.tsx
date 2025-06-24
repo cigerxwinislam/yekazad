@@ -4,6 +4,7 @@
 // La ilahe illallah
 // Allahu Ekber, Allahu Ekber, Allahu Ekber, La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
+ "use client";
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 
@@ -27,10 +28,10 @@ const ContactForm: React.FC = () => {
         setSubmitted(true);
         setForm({ name: "", email: "", message: "" });
       } else {
-        alert("Mesaj gönderilemedi.");
+        alert("Could not send message.");
       }
     } catch {
-      alert("Sunucuya ulaşılamıyor.");
+      alert("Could not reach server.");
     }
   };
 
@@ -50,7 +51,7 @@ const ContactForm: React.FC = () => {
     >
       {submitted && (
         <Alert variant="success" style={{ borderRadius: "12px", textAlign: "center" }}>
-          Mesajınız iletildi!
+          Your message has been sent!
         </Alert>
       )}
       <h2
@@ -62,10 +63,10 @@ const ContactForm: React.FC = () => {
           fontSize: "2rem",
         }}
       >
-        İletişim Formu
+        Contact Us
       </h2>
       <Form.Group className="mb-3" controlId="formName">
-        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Adınız</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Name</Form.Label>
         <Form.Control
           type="text"
           name="name"
@@ -81,7 +82,7 @@ const ContactForm: React.FC = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formEmail">
-        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>E-posta</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Email</Form.Label>
         <Form.Control
           type="email"
           name="email"
@@ -97,7 +98,7 @@ const ContactForm: React.FC = () => {
         />
       </Form.Group>
       <Form.Group className="mb-3" controlId="formMessage">
-        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Mesajınız</Form.Label>
+        <Form.Label style={{ color: "#495057", fontWeight: 500 }}>Your Message</Form.Label>
         <Form.Control
           as="textarea"
           rows={4}
@@ -130,11 +131,11 @@ const ContactForm: React.FC = () => {
           variant="success"
           type="submit"
         >
-          Gönder
+          Send
         </Button>
       </div>
       <p className="text-center mt-4" style={{ color: "#6c757d", fontSize: "1rem" }}>
-        Bize ulaşmak için lütfen yukarıdaki formu doldurun.
+        To contact us, please fill out the form above. We will get back to you as soon as possible.
       </p>
     </Form>
   );
