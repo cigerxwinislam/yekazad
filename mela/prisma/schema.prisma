@@ -1,6 +1,7 @@
 // Bismillahirrahmanirahim
 // Elhamdullillahirabbulalemin
-//Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
+// Es-selatu vesselamu ala rasulina Muhammedin ve ala alihi ve sahbihi, ecmain
+// Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 
 // Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
@@ -28,13 +29,7 @@ model User {
   sessions              Session[]
   posts                 Post[]
   mmavahi               Mmavahi[]
-  following             Follow[]       @relation("Following")
-  followers             Follow[]       @relation("Followers")
-  likes                 Like[]
   bookmarks             Bookmark[]
-  comments              Comment[]
-  receivedNotifications Notification[] @relation("Recipient")
-  issuedNotifications   Notification[] @relation("Issuer")
 
   createdAt   DateTime      @default(now())
   Mmhewcedari Mmhewcedari[]
@@ -43,7 +38,6 @@ model User {
   Mmwesayit   Mmwesayit[]
   Mmkargeh    Mmkargeh[]
   Mmhuner     Mmhuner[]
-
   @@map("users")
 }
 
@@ -56,26 +50,13 @@ model Session {
   @@map("sessions")
 }
 
-model Follow {
-  followerId  String
-  follower    User   @relation("Following", fields: [followerId], references: [id], onDelete: Cascade)
-  followingId String
-  following   User   @relation("Followers", fields: [followingId], references: [id], onDelete: Cascade)
-
-  @@unique([followerId, followingId])
-  @@map("follows")
-}
-
 model Post {
   id                  String         @id @default(cuid())
-  content             String
+  content             String[]
   userId              String
   user                User           @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments         Media[]
-  likes               Like[]
   bookmarks           Bookmark[]
-  comments            Comment[]
-  linkedNotifications Notification[]
 
   createdAt DateTime @default(now())
 
@@ -84,16 +65,13 @@ model Post {
 
 model Mmavahi {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmavahi")
@@ -101,16 +79,13 @@ model Mmavahi {
 
 model Mmhuner {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmhuner")
@@ -118,16 +93,13 @@ model Mmhuner {
 
 model Mmhewcedari {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmhewcedari")
@@ -135,16 +107,13 @@ model Mmhewcedari {
 
 model Mmkinc {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkinc")
@@ -152,16 +121,13 @@ model Mmkinc {
 
 model Mmkedkar {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkedkar")
@@ -169,16 +135,13 @@ model Mmkedkar {
 
 model Mmwesayit {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmwesayit")
@@ -186,16 +149,13 @@ model Mmwesayit {
 
 model Mmkargeh {
   id          String  @id @default(cuid())
-  content     String
+  content     String[]
   userId      String
   user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
   attachments Media[]
 
   bookmarks Bookmark[]
 
-  likes               Like[]
-  comments            Comment[]
-  linkedNotifications Notification[]
   createdAt           DateTime       @default(now())
 
   @@map("mmkargeh")
@@ -232,57 +192,6 @@ enum MediaType {
   VIDEO
 }
 
-model Comment {
-  id      String @id @default(cuid())
-  content String
-  userId  String
-  user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
-  postId  String
-  post    Post   @relation(fields: [postId], references: [id], onDelete: Cascade)
-
-  createdAt     DateTime     @default(now())
-  Mmavahi       Mmavahi?     @relation(fields: [mmavahiId], references: [id])
-  mmavahiId     String?
-  Mmhewcedari   Mmhewcedari? @relation(fields: [mmhewcedariId], references: [id])
-  mmhewcedariId String?
-  Mmkinc        Mmkinc?      @relation(fields: [mmkincId], references: [id])
-  mmkincId      String?
-  Mmkedkar      Mmkedkar?    @relation(fields: [mmkedkarId], references: [id])
-  mmkedkarId    String?
-  Mmwesayit     Mmwesayit?   @relation(fields: [mmwesayitId], references: [id])
-  mmwesayitId   String?
-  Mmkargeh      Mmkargeh?    @relation(fields: [mmkargehId], references: [id])
-  mmkargehId    String?
-  Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
-  mmhunerId     String?
-
-  @@map("comments")
-}
-
-model Like {
-  userId        String
-  user          User         @relation(fields: [userId], references: [id], onDelete: Cascade)
-  postId        String
-  post          Post         @relation(fields: [postId], references: [id], onDelete: Cascade)
-  Mmavahi       Mmavahi?     @relation(fields: [mmavahiId], references: [id])
-  mmavahiId     String?
-  Mmhewcedari   Mmhewcedari? @relation(fields: [mmhewcedariId], references: [id])
-  mmhewcedariId String?
-  Mmkinc        Mmkinc?      @relation(fields: [mmkincId], references: [id])
-  mmkincId      String?
-  Mmkedkar      Mmkedkar?    @relation(fields: [mmkedkarId], references: [id])
-  mmkedkarId    String?
-  Mmwesayit     Mmwesayit?   @relation(fields: [mmwesayitId], references: [id])
-  mmwesayitId   String?
-  Mmkargeh      Mmkargeh?    @relation(fields: [mmkargehId], references: [id])
-  mmkargehId    String?
-  Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
-  mmhunerId     String?
-
-  @@unique([userId, postId])
-  @@map("likes")
-}
-
 model Bookmark {
   id     String @id @default(cuid())
   userId String
@@ -305,43 +214,12 @@ model Bookmark {
   mmkargehId    String?
   Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
   mmhunerId     String?
-
-  @@unique([userId, postId])
-  @@map("bookmarks")
 }
 
-model Notification {
-  id          String           @id @default(cuid())
-  recipientId String
-  recipient   User             @relation("Recipient", fields: [recipientId], references: [id], onDelete: Cascade)
-  issuerId    String
-  issuer      User             @relation("Issuer", fields: [issuerId], references: [id], onDelete: Cascade)
-  postId      String?
-  post        Post?            @relation(fields: [postId], references: [id], onDelete: Cascade)
-  type        NotificationType
-  read        Boolean          @default(false)
-
-  createdAt     DateTime     @default(now())
-  Mmavahi       Mmavahi?     @relation(fields: [mmavahiId], references: [id])
-  mmavahiId     String?
-  Mmhewcedari   Mmhewcedari? @relation(fields: [mmhewcedariId], references: [id])
-  mmhewcedariId String?
-  Mmkinc        Mmkinc?      @relation(fields: [mmkincId], references: [id])
-  mmkincId      String?
-  Mmkedkar      Mmkedkar?    @relation(fields: [mmkedkarId], references: [id])
-  mmkedkarId    String?
-  Mmwesayit     Mmwesayit?   @relation(fields: [mmwesayitId], references: [id])
-  mmwesayitId   String?
-  Mmkargeh      Mmkargeh?    @relation(fields: [mmkargehId], references: [id])
-  mmkargehId    String?
-  Mmhuner       Mmhuner?     @relation(fields: [mmhunerId], references: [id])
-  mmhunerId     String?
-
-  @@map("notifications")
-}
-
-enum NotificationType {
-  LIKE
-  FOLLOW
-  COMMENT
+model Mmmpeyam {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  createdAt DateTime @default(now())
 }
