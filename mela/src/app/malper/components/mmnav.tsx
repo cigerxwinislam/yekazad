@@ -62,15 +62,15 @@ Mobile
 
 
 
-            <NavDropdown title="Services " id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmkarubar">Windows Apps</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                
+            <NavDropdown title="Blog " id="basic-nav-dropdown">
+              <NavDropdown.Item href="/malper/mmkargeh/mmmweb">Web Development </NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkargeh/mmmobile">
+                Mobile Development
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkargeh/mmmai">Building AI apps</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
+              <NavDropdown.Item href="/malper/mmkargeh/mmmcp">
+                About Cross Platform Apps
               </NavDropdown.Item>
             </NavDropdown>
 
@@ -114,7 +114,7 @@ Mobile
               </NavDropdown.Item>
             </NavDropdown>
 
-            <Nav.Link href="#link">About Us</Nav.Link>
+            <Nav.Link href="/malper/mmmmm">About Us</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>
