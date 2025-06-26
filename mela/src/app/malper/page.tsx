@@ -7,20 +7,12 @@
 // Subhanallah, Elhamdulillah, Allahu Ekber
 // Estağfirullah El-Azim
 // La ilahe illallah, Muhammedur Resulullah
-import Head from "next/head";
 import React from 'react'
 
 function page() {
   return (
     <>
-      <Head>
-        <title>Dashboard | Web, Mobile & AI Solutions</title>
-        <meta name="description" content="Build your website, mobile app, or get AI solutions with our easy-to-use platform. Stay updated with the latest features and improvements." />
-        <meta name="keywords" content="web, mobile, ai, solutions, dashboard, templates, app, artificial intelligence" />
-        <meta property="og:title" content="Dashboard | Web, Mobile & AI Solutions" />
-        <meta property="og:description" content="Build your website, mobile app, or get AI solutions with our easy-to-use platform." />
-        <meta property="og:type" content="website" />
-      </Head>
+   
       <main className="flex-grow container mx-auto py-8">
         {/* Dashboard Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

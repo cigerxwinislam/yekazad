@@ -3,6 +3,7 @@
 // Es-selatu ve Es-selamu ala Resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // Allah u Ekber, Allah u Ekber, Allah u Ekber, La ilahe illallah
 // Süphanallah, Elhamdulillah, Allahu Ekber
+
 import { Prisma } from "@prisma/client";
 
 export function getUserDataSelect(loggedInUserId: string) {
@@ -83,4 +84,12 @@ export interface PostsPage {
 
 export interface BookmarkInfo {
   isBookmarkedByUser: boolean;
+}
+
+export interface Attachment {
+  file: File;
+  mediaId?: string;
+  url?: string;
+  type?: string;
+  isUploading: boolean;
 }

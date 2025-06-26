@@ -219,17 +219,17 @@ function AttachmentPreviews({
 }
 
 function AttachmentPreview({
-  attachment: { file, mediaId, isUploading },
+  attachment,
   onRemoveClick,
 }: {
   attachment: Attachment;
   onRemoveClick: () => void;
 }) {
-  const src = URL.createObjectURL(file);
+  const src = attachment.url || URL.createObjectURL(attachment.file);
 
   return (
-    <div className={cn("relative mx-auto size-fit", isUploading && "opacity-50")}>
-      {file.type.startsWith("image") ? (
+    <div className={cn("relative mx-auto size-fit", attachment.isUploading && "opacity-50")}>
+      {attachment.file.type.startsWith("image") ? (
         <Image
           src={src}
           alt="Attachment preview"
@@ -239,10 +239,10 @@ function AttachmentPreview({
         />
       ) : (
         <video controls className="size-fit max-h-[30rem] rounded-2xl">
-          <source src={src} type={file.type} />
+          <source src={src} type={attachment.file.type} />
         </video>
       )}
-      {!isUploading && (
+      {!attachment.isUploading && (
         <button
           onClick={onRemoveClick}
           className="absolute right-3 top-3 rounded-full bg-foreground p-1.5 text-background hover:bg-foreground/60"

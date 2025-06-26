@@ -58,8 +58,8 @@ export default function useMediaUpload() {
           return {
             ...a,
             mediaId: uploadResult.serverData.mediaId,
-            url: uploadResult.serverData.url,      // sunucudan dönen url
-            type: uploadResult.serverData.type,    // sunucudan dönen type (IMAGE/VIDEO)
+            url: uploadResult.serverData.url,
+            type: uploadResult.serverData.type,
             isUploading: false,
           };
         }),

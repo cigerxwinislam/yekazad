@@ -3,8 +3,8 @@
 // Es-selatu vesselamu ala resulina Muhammedin ve ala alihi ve sahbihi ecmain
 // La ilahe illallah
 // Subhanallah, Elhamdulillah, Allahu Ekber
-"use server";
 
+"use server"
 import { validateRequest } from "@/auth";
 import prisma from "@/lib/prisma";
 import { getPostDataInclude } from "@/lib/types";
@@ -22,7 +22,7 @@ export async function submitPost(input: {
 
   const newPost = await prisma.mmavahi.create({
     data: {
-      content, // Convert string[] to a single string
+      content: content.join("\n"), // Convert string[] to a single string
       userId: user.id,
       attachments: {
         connect: mediaIds.map((id) => ({ id })),

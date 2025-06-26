@@ -11,6 +11,7 @@ import { Form, Button, Alert } from "react-bootstrap";
 const ContactForm: React.FC = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -18,6 +19,7 @@ const ContactForm: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setError(null);
     try {
       const response = await fetch("/api/mmmpeyam", {
         method: "POST",
@@ -28,10 +30,11 @@ const ContactForm: React.FC = () => {
         setSubmitted(true);
         setForm({ name: "", email: "", message: "" });
       } else {
-        alert("Could not send message.");
+        const data = await response.json();
+        setError(data.error || "Could not send message.");
       }
     } catch {
-      alert("Could not reach server.");
+      setError("Could not reach server.");
     }
   };
 
@@ -52,6 +55,11 @@ const ContactForm: React.FC = () => {
       {submitted && (
         <Alert variant="success" style={{ borderRadius: "12px", textAlign: "center" }}>
           Your message has been sent!
+        </Alert>
+      )}
+      {error && (
+        <Alert variant="danger" style={{ borderRadius: "12px", textAlign: "center" }}>
+          {error}
         </Alert>
       )}
       <h2
