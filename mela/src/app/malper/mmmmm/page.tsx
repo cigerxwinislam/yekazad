@@ -107,7 +107,7 @@ export default function page() {
                     <p style={{ fontSize: "1rem", color: "#6c757d", marginBottom: 12 }}>
                       Born in 1997 in Agirî/Gîhadîn/ Bozo.</p>
                     <div style={{ color: "#495057", fontWeight: 500, marginBottom: 6 }}>
-                      Full Stack Developer
+                      Full Stack Developer and founder of Yekazad Software Center
                     </div>
                     <div style={{ fontSize: "0.98rem", color: "#333", marginBottom: 10 }}>
                       Experienced in web and mobile app development, AI solutions, and cloud technologies. Passionate about building scalable and user-friendly products.
@@ -150,11 +150,7 @@ export default function page() {
           </Row>
         </Card.Body>
       </Card>
-      <div style={{ marginTop: "20px", textAlign: "center" }}>
-        <p style={{ color: "#6c757d" }}>
-          © 2023 Yekazad Software Center. All rights reserved.
-        </p>
-      </div>
+     
 
     </div>
   );
