@@ -32,11 +32,11 @@ export default function page() {
         }}
       >
         <Card.Body>
-          <h3>  In the Name of Allah, the Most Gracious, the Most Merciful<br />
+          <h3 style={{background:"#013220",color:"white",fontStyle:"italic",borderRadius:"15px"}}> <br/> In the Name of Allah, the Most Gracious, the Most Merciful<br />
 
             All Praise is due to Allah, the Lord of all the worlds
           <br />
-            And Peace and Blessings be upon our Prophet Muhammad, his family, and companions
+            And Peace and Blessings be upon our Prophet Muhammad, his family, and companions <br /><br />
            </h3>
            <br />
           <Card.Title style={{ fontSize: "2rem", fontWeight: 700 }}>
@@ -77,18 +77,74 @@ export default function page() {
 
             {/* Right Column */}
             <Col xs={12} md={5}>
-              <Image
-                src="/images/about-us.jpg"
-                alt="About Us"
-                fluid
-                style={{
-                  borderRadius: 10,
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  maxHeight: "400px",
-                  objectFit: "cover",
-                }}
-              />
-            </Col>  
+              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+                <Image
+                  src="/mmmmm.jpg"
+                  alt="About Us"
+                  fluid
+                  style={{
+                    borderRadius: 10,
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                    maxHeight: "400px",
+                    objectFit: "cover",
+                    objectPosition: "bottom", // üstten kırpma
+                  }}
+                />
+                {/* Resume Card */}
+                <Card
+                  style={{
+                    borderRadius: 12,
+                    boxShadow: "0 2px 8px rgba(40,167,69,0.08)",
+                    padding: 16,
+                    background: "#fff",
+                  }}
+                >
+                  <Card.Body style={{ padding: 12 }}>
+                    <Card.Title style={{ fontSize: "1.2rem", color: "#28a745", fontWeight: 700 }}>
+                    
+                     İslam Tunç
+                    </Card.Title>
+                    <div style={{ color: "#495057", fontWeight: 500, marginBottom: 6 }}>
+                      Full Stack Developer
+                    </div>
+                    <div style={{ fontSize: "0.98rem", color: "#333", marginBottom: 10 }}>
+                      Experienced in web and mobile app development, AI solutions, and cloud technologies. Passionate about building scalable and user-friendly products.
+                    </div>
+                    <div style={{ fontSize: "0.95rem", color: "#6c757d" }}>
+                      <br />
+                      <strong>
+                        <a
+                          href="https://twitter.com/islamtun8"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            color: "#1da1f2",
+                            textDecoration: "none",
+                            display: "inline-flex",
+                            alignItems: "center",
+                            gap: 4,
+                            fontWeight: 600,
+                          }}
+                          title="Twitter"
+                        >
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 24 24"
+                            fill="#1da1f2"
+                            xmlns="http://www.w3.org/2000/svg"
+                            style={{ marginRight: 4 }}
+                          >
+                            <path d="M22.46 5.924c-.793.352-1.646.59-2.542.698a4.48 4.48 0 0 0 1.965-2.475 8.94 8.94 0 0 1-2.828 1.082A4.48 4.48 0 0 0 11.07 9.03a12.72 12.72 0 0 1-9.24-4.686 4.48 4.48 0 0 0 1.387 5.98A4.44 4.44 0 0 1 2 9.097v.057a4.48 4.48 0 0 0 3.59 4.393c-.4.11-.82.17-1.25.17-.307 0-.6-.03-.89-.085a4.48 4.48 0 0 0 4.18 3.11A8.98 8.98 0 0 1 2 19.54a12.67 12.67 0 0 0 6.88 2.02c8.26 0 12.78-6.84 12.78-12.77 0-.19-.01-.38-.02-.57A9.22 9.22 0 0 0 24 4.59a8.93 8.93 0 0 1-2.54.7z"/>
+                          </svg>
+                          @islamtun8
+                        </a>
+                      </strong>
+                    </div>
+                  </Card.Body>
+                </Card>
+              </div>
+            </Col>
           </Row>
         </Card.Body>
       </Card>
