@@ -65,9 +65,15 @@ export default async function Layout({
           {/* Sağ MenuBar sadece sm ve üstü ekranlarda görünür */}
           <MenuBar className="sticky top-[5.25rem] hidden h-fit flex-none space-y-3 rounded-2xl bg-card px-2 py-3 shadow-sm sm:block lg:px-3 xl:w-80" />
         </div>
-        {/* Mobilde altta MenuBar */}
-        <MenuBar className="sticky bottom-0 flex w-full justify-center gap-2 border-t bg-card p-2 sm:hidden" />
-        <Footer />
+        {/* Mobilde altta Footer ve MenuBar */}
+        <div className="sm:hidden w-full">
+          <Footer />
+          <MenuBar className="sticky bottom-0 flex w-full justify-center gap-2 border-t bg-card p-2" />
+        </div>
+        {/* Masaüstünde Footer */}
+        <div className="hidden sm:block">
+          <Footer />
+        </div>
       </div>
     </SessionProvider>
   );
