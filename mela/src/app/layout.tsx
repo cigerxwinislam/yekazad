@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | Yekazad Software Center",
     default: " Yekazad Software Center",
   },
-  description: " Software Development",
+  description: " Yazılım ve teknoloji çözümleri sunan Yekazad Software Center, web uygulamaları, mobil uygulamalar ve yapay zeka çözümleri ile işinizi ileri taşıyor.",
 };
 
 export default function RootLayout({
