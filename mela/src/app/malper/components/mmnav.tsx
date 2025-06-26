@@ -46,15 +46,15 @@ function Mmmnavbar() {
 
 
             <NavDropdown title="Courses" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mmperwerdehi">Web</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/malper/mmhewcedari/mmmweb">Web</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmhewcedari/mmmobile">
                 
                 
 Mobile
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Machine Learning</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmhewcedari/mmmai">Machine Learning</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/malper/mmhewcedari/mmmcp">
                 
                 Cross Platform Apps
               </NavDropdown.Item>

@@ -7,7 +7,7 @@
 
 "use client";
 import React from "react";
-import { Card, Row, Col, Alert } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
 
@@ -34,39 +34,33 @@ function page() {
         }}
       >
         <Card.Body>
-          <Card.Title style={{ fontSize: "1.5rem" }}>Sporcu Beslenmesi</Card.Title>
+          <Card.Title style={{ fontSize: "1.5rem" }}>Cross-Platform Mobile Development Course</Card.Title>
           <Row className="g-4">
             {/* Sol Kolon */}
             <Col xs={12} md={6} className="mb-3 mb-md-0">
               <Card style={{ textAlign: "center", height: "100%" }}>
                 <Card.Body>
-                  <Card.Title style={{ fontSize: "1.1rem" }}>Sporcularda beslenmenin önemi</Card.Title>
+                  <Card.Title style={{ fontSize: "1.1rem" }}>Why Learn Cross-Platform Development?</Card.Title>
                   <Card.Text style={{ fontSize: "1rem" }}>
                     <br />
-                    Sporcularda beslenme, performansın artırılması, toparlanma
-                    sürecinin hızlandırılması ve genel sağlığın korunması
-                    açısından kritik bir rol oynamaktadır. Son dönem
-                    araştırmalar, beslenmenin sadece enerji alımı değil, aynı
-                    zamanda antrenman adaptasyonu, bağışıklık sistemi desteği ve
-                    zihinsel dayanıklılık üzerinde de etkili olduğunu
-                    göstermektedir.
+                    Cross-platform mobile development allows you to build apps for both iOS and Android using a single codebase. <strong>React Native</strong> is the industry standard for building high-performance, native-feeling apps efficiently.
                     <br />
                     <br />
-                    <strong>Makro ve Mikro Besinlerin Önemi</strong>
+                    <strong>What Will You Learn?</strong>
                     <br />
-                    Sporcuların enerji ve protein ihtiyaçları, sedanter
-                    bireylere göre daha fazladır. Bu nedenle karbonhidrat,
-                    protein ve yağ gibi makro besin ögelerinin dengeli alımı
-                    önemlidir. Ayrıca, vitamin ve mineral gibi mikro besin
-                    ögeleri de performans ve toparlanma süreçlerinde kritik rol
-                    oynar.
+                    <ul style={{ textAlign: "left", fontSize: "1rem", margin: "0 auto", maxWidth: 320 }}>
+                      <li>React Native fundamentals & setup</li>
+                      <li>Building UI components for mobile</li>
+                      <li>Navigation and routing in React Native</li>
+                      <li>State management (Context, Redux, etc.)</li>
+                      <li>Connecting to APIs and data storage</li>
+                      <li>Deploying to App Store & Google Play</li>
+                      <li>Best practices for cross-platform apps</li>
+                    </ul>
                     <br />
+                    <strong>Who Is This Course For?</strong>
                     <br />
-                    <strong>Sonuç</strong>
-                    <br />
-                    Sporcularda beslenme, sadece fiziksel performansı değil,
-                    aynı zamanda genel sağlığı, zihinsel dayanıklılığı ve uzun
-                    vadeli başarıyı etkileyen temel bir faktördür.
+                    Anyone who wants to build mobile apps for both iOS and Android using React Native, from beginners to experienced developers.
                   </Card.Text>
                 </Card.Body>
               </Card>
@@ -74,7 +68,7 @@ function page() {
             {/* Sağ Kolon */}
             <Col xs={12} md={6} className="d-flex align-items-center">
               <Image
-                src="https://iasbh.tmgrup.com.tr/a9e335/0/0/0/0/0/0?u=https://isbh.tmgrup.com.tr/sb/album/2021/12/11/tum-beslenmeniz-degisiyor-iste-saat-1600dan-sonra-asla-tuketmemeniz-gereken-o-besin-1639200626070.jpg&mw=752&mh=700"
+                src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=700&q=80"
                 style={{
                   border: "5px solid white",
                   borderRadius: "10px",
@@ -82,15 +76,13 @@ function page() {
                   height: "auto",
                   marginBottom: "10px",
                 }}
-                alt="ROJDA MUSA"
+                alt="React Native Cross-Platform Development"
                 fluid
               />
             </Col>
           </Row>
         </Card.Body>
       </Card>
-      {/* Alert ve ForYouFeed Alt Kısma Taşındı */}
-     
     </div>
   );
 }
