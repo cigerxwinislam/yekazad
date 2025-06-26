@@ -22,7 +22,7 @@ export async function submitPost(input: {
 
   const newPost = await prisma.mmavahi.create({
     data: {
-      content: Array.isArray(content) ? content.join("\n") : (content || ""), // güvenli dönüşüm
+      content, // DİZİ OLARAK GÖNDER
       userId: user.id,
       attachments: {
         connect: Array.isArray(mediaIds) ? mediaIds.map((id) => ({ id })) : [],
