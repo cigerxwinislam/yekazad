@@ -77,7 +77,17 @@ export default function page() {
 
             {/* Right Column */}
             <Col xs={12} md={5}>
-              <div style={{ display: "flex", flexDirection: "column", gap: 16 }}>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 16,
+                  alignItems: "center", // ortala
+                  width: "100%",
+                  justifyContent: "center",
+                }}
+              >
+                <br />
                 <Image
                   src="/mmmmm.jpg"
                   alt="About Us"
@@ -85,9 +95,12 @@ export default function page() {
                   style={{
                     borderRadius: 10,
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                    maxHeight: "400px",
+                    maxHeight: "320px", // daha büyük yükseklik
+                    maxWidth: "260px",  // daha geniş
                     objectFit: "cover",
-                    objectPosition: "bottom", // üstten kırpma
+                    objectPosition: "top",
+                    margin: "0 auto",
+                    display: "block",
                   }}
                 />
                 {/* Resume Card */}
@@ -97,6 +110,10 @@ export default function page() {
                     boxShadow: "0 2px 8px rgba(40,167,69,0.08)",
                     padding: 16,
                     background: "#fff",
+                    width: "100%",
+                    maxWidth: 260,
+                    margin: "0 auto", // ekstra ortalama
+                    display: "block",
                   }}
                 >
                   <Card.Body style={{ padding: 12 }}>
