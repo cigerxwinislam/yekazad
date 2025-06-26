@@ -25,7 +25,7 @@ function page() {
             />
             <h3 className="text-xl font-bold mb-2">Build Your Website</h3>
             <p className="text-gray-600">Build your website with our easy-to-use templates.</p>
-            <a href="#projects" className="text-blue-500 hover:underline mt-4 block">
+            <a href="/malper/mmavahi/mmmweb" className="text-blue-500 hover:underline mt-4 block">
               View Templates and Start Building
             </a>
           </div>
@@ -39,7 +39,7 @@ function page() {
             />
             <h3 className="text-xl font-bold mb-2">Have Your Mobile App </h3>
             <p className="text-gray-600">See how easy it is to build mobile apps with our platform.</p>
-            <a href="#team" className="text-blue-500 hover:underline mt-4 block">
+            <a href="/malper/mmavahi/mmmobile" className="text-blue-500 hover:underline mt-4 block">
               Take a Look at Our Mobile App Solutions
             </a>
           </div>
@@ -53,8 +53,8 @@ function page() {
             />
             <h3 className="text-xl font-bold mb-2">Get ai solutions</h3>
             <p className="text-gray-600"> Get AI solutions tailored to your needs.</p>
-            <a href="#deadlines" className="text-blue-500 hover:underline mt-4 block">
-              Check Deadlines
+            <a href="/malper/mmavahi/mmai" className="text-blue-500 hover:underline mt-4 block">
+              Explore Our AI Solutions
             </a>
           </div>
         </div>

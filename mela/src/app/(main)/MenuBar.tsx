@@ -17,7 +17,13 @@ interface MenuBarProps {
 export default async function MenuBar({ className }: MenuBarProps) {
   const { user } = await validateRequest();
 
-  if (!user) return null ;
+  if (!user) return null;
+
+  // Mesaj sayısını çek
+  let messageCount = 0;
+  try {
+    messageCount = await prisma.mmmpeyam.count();
+  } catch {}
 
   return (
     <div className={className}>
@@ -51,9 +57,33 @@ export default async function MenuBar({ className }: MenuBarProps) {
         title="messages"
         asChild
       >
-        <Link href="/mmmpeyam">
+        <Link href="/mmmpeyam" className="relative flex items-center gap-3">
           <Mail />
           <span className="hidden lg:inline">Messages</span>
+          {messageCount > 0 && (
+            <span
+              style={{
+                position: "absolute",
+                top: 2,
+                right: -8,
+                background: "#dc3545",
+                color: "#fff",
+                borderRadius: "50%",
+                fontSize: "0.75rem",
+                minWidth: 20,
+                height: 20,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontWeight: 700,
+                padding: "0 6px",
+                border: "2px solid #fff",
+                zIndex: 1,
+              }}
+            >
+              {messageCount}
+            </span>
+          )}
         </Link>
       </Button>
     </div>
