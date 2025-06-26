@@ -66,6 +66,22 @@ export default function page() {
                       title: "AI Solutions",
                       desc: "Implementing AI-driven applications to enhance business processes."
                     },
+                     {
+                      title: "AI Solutions",
+                      desc: "Implementing AI-driven applications to enhance business processes."
+                    },
+                    {
+                      title: "Software Integration",
+                      desc: "Integrating various software systems for seamless data flow and functionality."
+                    },
+                    {
+                      title: "Cloud Services",
+                      desc: "Offering cloud-based solutions for scalability and flexibility."
+                    },
+                    {
+                      title: "Consulting & Support",
+                      desc: "Providing expert advice and ongoing support for your software needs."
+                    }
                   ].map((item, idx) => (
                     <li key={idx} style={{ marginBottom: 10 }}>
                       <strong>{item.title}</strong>: {item.desc}
