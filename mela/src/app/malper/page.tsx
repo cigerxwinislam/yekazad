@@ -63,9 +63,10 @@ function page() {
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Recent Updates</h2>
           <ul className="list-disc pl-5 text-gray-700">
-            <li>New project management tool has been added.</li>
-            <li>Weekly team meeting scheduled for Friday.</li>
-            <li>System maintenance planned for Saturday night.</li>
+            <li>E commerce app is being prepared to install play store.</li>
+            <li>New features added to the website builder.</li>
+            <li>Mobile app development course launched.</li>
+            <li>The special Kurdish  AI asisstan Feqi is <a href='https:feqi.vercel.app'>here</a>.</li>
           </ul>
         </div>
       </main>
