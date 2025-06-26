@@ -22,10 +22,10 @@ export async function submitPost(input: {
 
   const newPost = await prisma.mmavahi.create({
     data: {
-      content: content.join("\n"), // Convert string[] to a single string
+      content: Array.isArray(content) ? content.join("\n") : (content || ""), // güvenli dönüşüm
       userId: user.id,
       attachments: {
-        connect: mediaIds.map((id) => ({ id })),
+        connect: Array.isArray(mediaIds) ? mediaIds.map((id) => ({ id })) : [],
       },
     },
     include: getPostDataInclude(user.id),
