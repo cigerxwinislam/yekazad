@@ -104,6 +104,8 @@ export default function page() {
                     
                      İslam Tunç
                     </Card.Title>
+                    <p style={{ fontSize: "1rem", color: "#6c757d", marginBottom: 12 }}>
+                      Born in 1997 in Agirî/Gîhadîn/ Bozo.</p>
                     <div style={{ color: "#495057", fontWeight: 500, marginBottom: 6 }}>
                       Full Stack Developer
                     </div>
