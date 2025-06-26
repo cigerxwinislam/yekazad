@@ -18,7 +18,7 @@ export default function layout({ children }: { children: React.ReactNode }) {
     
       {children}
       <Card style={{ marginTop: "20px", width: "100%", maxWidth: "700px", textAlign: "center", padding: "19px" }}>
-        <Card.Title>Diğer Yazılar</Card.Title>
+        <Card.Title>Other Articles</Card.Title>
         <Card.Body>
           <ForYouFeed />
         </Card.Body>

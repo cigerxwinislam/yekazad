@@ -89,21 +89,21 @@ Mobile
 
 
             <NavDropdown title="References" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/malper/mm">NLP</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/malper/mmkedkar/mmmapp">Last projects</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkedkar/mmmothr">
                 
-                Object Detection
+                Code Examples
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Image Processing</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmkedkar/mmmad"> Advertising and other services</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/malper/mmkedkar/mmmadvanced">
                 Advanced
               </NavDropdown.Item>
             </NavDropdown>
 
 
             <NavDropdown title="For Developers" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/mmmmm">Courses</NavDropdown.Item>
+              <NavDropdown.Item href="/mmwesayit">Courses</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
                 Documantations
               </NavDropdown.Item>

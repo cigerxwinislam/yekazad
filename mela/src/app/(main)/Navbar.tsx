@@ -57,7 +57,7 @@ export default function Navbar() {
           `}
         >
           <Link
-            href="/dashboard"
+            href="/mmdashboard"
             className="text-sm font-medium text-secondary hover:text-primary w-full lg:w-auto px-5 py-2 lg:p-0 text-center"
             onClick={() => setMenuOpen(false)}
           >
