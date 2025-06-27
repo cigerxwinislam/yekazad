@@ -103,13 +103,13 @@ Mobile
 
 
             <NavDropdown title="For Developers" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/mmwesayit">Courses</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
+              <NavDropdown.Item href="/malper/mmwesayit">Courses</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmwesayit/mmmdocs">
                 Documantations
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Contribute</NavDropdown.Item>
+              <NavDropdown.Item href="/malper/mmwesayit/mmmopns">Contribute</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
+              <NavDropdown.Item href="/malper/mmwesayit/mmmmm">
                 Join to Yekazad
               </NavDropdown.Item>
             </NavDropdown>
